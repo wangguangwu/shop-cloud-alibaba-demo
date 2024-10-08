@@ -12,4 +12,10 @@
     <name>bean-module</name>
     <description>bean-module</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 </project>
