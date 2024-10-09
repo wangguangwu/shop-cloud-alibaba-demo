@@ -23,7 +23,7 @@ public class CodeGenerator {
     /**
      * 项目名称
      */
-    private static final String PROJECT_NAME = "order-core";
+    private static final String PROJECT_NAME = "order-module/order-core";
 
     /**
      * 包名

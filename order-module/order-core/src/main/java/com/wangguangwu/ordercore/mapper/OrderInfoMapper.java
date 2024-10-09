@@ -1,7 +1,7 @@
 package com.wangguangwu.ordercore.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wangguangwu.ordercore.entity.OrderInfoDO;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.wangguangwu.ordercore.entity.OrderInfoDO;
  * </p>
  *
  * @author wangguangwu
- * @since 2024-08-22
+ * @since 2024-10-09
  */
 public interface OrderInfoMapper extends BaseMapper<OrderInfoDO> {
 
