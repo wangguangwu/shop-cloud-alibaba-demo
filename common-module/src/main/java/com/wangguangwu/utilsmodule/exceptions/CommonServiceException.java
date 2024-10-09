@@ -18,13 +18,12 @@ public class CommonServiceException extends RuntimeException {
     protected final String message;
 
     public CommonServiceException() {
-        this.data = ResponseEnum.SERVICE_UNKNOWN.getCode();
-        this.message = ResponseEnum.SERVICE_UNKNOWN.getMessage();
+        this.data = ResponseEnum.COMMON_SERVICE_EXCEPTION.getCode();
+        this.message = ResponseEnum.COMMON_SERVICE_EXCEPTION.getMessage();
     }
 
     public CommonServiceException(String message) {
-        this.data = ResponseEnum.SERVICE_UNKNOWN.getCode();
+        this.data = ResponseEnum.COMMON_SERVICE_EXCEPTION.getCode();
         this.message = message;
     }
-
 }

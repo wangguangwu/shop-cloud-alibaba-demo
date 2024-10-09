@@ -23,12 +23,12 @@ public class CodeGenerator {
     /**
      * 项目名称
      */
-    private static final String PROJECT_NAME = "order-module";
+    private static final String PROJECT_NAME = "order-core";
 
     /**
      * 包名
      */
-    private static final String PACKAGE_NAME = "com.wangguangwu.ordermodule";
+    private static final String PACKAGE_NAME = "com.wangguangwu.ordercore";
 
     /**
      * 文件所在目录

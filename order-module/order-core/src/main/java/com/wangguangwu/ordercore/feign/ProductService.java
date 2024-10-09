@@ -1,7 +1,7 @@
 package com.wangguangwu.ordercore.feign;
 
-import com.wangguangwu.beanmodule.bean.Product;
-import com.wangguangwu.ordermodule.feign.fallback.ProductServiceFallBackFactory;
+import com.wangguangwu.beanmodule.ProductDTO;
+import com.wangguangwu.ordercore.feign.fallback.ProductServiceFallBackFactory;
 import com.wangguangwu.utilsmodule.constant.ServiceConstants;
 import com.wangguangwu.utilsmodule.response.Response;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -22,7 +22,7 @@ public interface ProductService {
      * @return 商品信息
      */
     @GetMapping(value = "/product/get/{pid}")
-    Response<Product> getProduct(@PathVariable("pid") Long pid);
+    Response<ProductDTO> getProduct(@PathVariable("pid") Long pid);
 
     /**
      * 更新库存数量

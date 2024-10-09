@@ -36,15 +36,22 @@ public class MyBatisPlusConfiguration {
 
         @Override
         public void insertFill(MetaObject metaObject) {
-            // 自动填充创建时间和更新时间字段
-            this.strictInsertFill(metaObject, "createTime", LocalDateTime::now, LocalDateTime.class);
-            this.strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+            // 检查并填充创建时间字段
+            if (metaObject.hasGetter("createTime") && getFieldValByName("createTime", metaObject) == null) {
+                this.strictInsertFill(metaObject, "createTime", LocalDateTime::now, LocalDateTime.class);
+            }
+            // 检查并填充更新时间字段
+            if (metaObject.hasGetter("updateTime") && getFieldValByName("updateTime", metaObject) == null) {
+                this.strictInsertFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+            }
         }
 
         @Override
         public void updateFill(MetaObject metaObject) {
-            // 自动填充更新时间字段
-            this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+            // 检查并填充更新时间字段
+            if (metaObject.hasGetter("updateTime") && getFieldValByName("updateTime", metaObject) == null) {
+                this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
+            }
         }
     }
 

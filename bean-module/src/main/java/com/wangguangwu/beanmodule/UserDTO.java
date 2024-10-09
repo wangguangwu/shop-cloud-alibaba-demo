@@ -3,13 +3,11 @@ package com.wangguangwu.beanmodule;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serial;
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
  * <p>
- * 用户表
+ * 用户信息
  * </p>
  *
  * @author wangguangwu
@@ -17,13 +15,10 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class User implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class UserDTO {
 
     /**
-     * 主键
+     * 主键 id
      */
     private Long id;
 
@@ -61,4 +56,5 @@ public class User implements Serializable {
      * 更新时间
      */
     private LocalDateTime gmtUpdated;
+
 }

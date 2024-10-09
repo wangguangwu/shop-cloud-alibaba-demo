@@ -26,19 +26,34 @@ public enum ResponseEnum {
     FAIL(-1, "失败"),
 
     /**
-     * 业务层异常
+     * 通用业务异常
      */
-    SERVICE_UNKNOWN(1000, "业务层异常"),
-
-    /**
-     * 系统未知异常
-     */
-    SYSTEM_UNKNOWN(1001, "系统未知异常"),
+    COMMON_SERVICE_EXCEPTION(1000, "通用业务异常"),
 
     /**
      * 入参校验异常
      */
-    METHOD_ARGUMENT_NOT_VALID(1002, "系统未知异常");
+    METHOD_ARGUMENT_NOT_VALID(1001, "入参校验异常"),
+
+    /**
+     * 系统未知异常
+     */
+    SYSTEM_UNKNOWN(1002, "系统未知异常"),
+
+    /**
+     * 用户服务异常
+     */
+    USER_SERVER_EXCEPTION(1003, "用户服务异常"),
+
+    /**
+     * 产品服务异常
+     */
+    PRODUCT_SERVER_EXCEPTION(1004, "产品服务异常"),
+
+    /**
+     * 订单服务异常
+     */
+    ORDER_SERVER_EXCEPTION(1005, "订单服务异常");
 
     /**
      * 状态码

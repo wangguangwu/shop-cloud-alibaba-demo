@@ -1,7 +1,7 @@
 package com.wangguangwu.ordercore.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wangguangwu.ordermodule.entity.OrderInfoDO;
+import com.wangguangwu.ordercore.entity.OrderInfoDO;
 
 /**
  * <p>

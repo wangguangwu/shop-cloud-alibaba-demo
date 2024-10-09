@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 商品表
+ * 商品信息
  * </p>
  *
  * @author wangguangwu
@@ -16,10 +16,10 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class Product {
+public class ProductDTO {
 
     /**
-     * 主键
+     * 主键 id
      */
     private Long id;
 

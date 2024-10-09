@@ -31,7 +31,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(CommonServiceException.class)
     private Response<String> handleServiceException(CommonServiceException exception) {
         log.error("ServiceException occurred: {}", exception.getMessage(), exception);
-        return Response.error(ResponseEnum.SERVICE_UNKNOWN.getCode(), exception.getMessage());
+        return Response.error(ResponseEnum.COMMON_SERVICE_EXCEPTION.getCode(), exception.getMessage());
     }
 
     /**

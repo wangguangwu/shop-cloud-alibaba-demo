@@ -70,12 +70,12 @@
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
         <dependency>
@@ -83,6 +83,11 @@
             <artifactId>common-module</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>com.wangguangwu</groupId>
+            <artifactId>bean-module</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

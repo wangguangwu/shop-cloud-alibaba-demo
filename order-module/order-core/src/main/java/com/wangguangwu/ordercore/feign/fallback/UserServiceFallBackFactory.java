@@ -1,6 +1,6 @@
 package com.wangguangwu.ordercore.feign.fallback;
 
-import com.wangguangwu.ordermodule.feign.UserService;
+import com.wangguangwu.ordercore.feign.UserService;
 import com.wangguangwu.utilsmodule.response.Response;
 import org.springframework.cloud.openfeign.FallbackFactory;
 import org.springframework.stereotype.Component;
