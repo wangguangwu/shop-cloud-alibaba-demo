@@ -8,7 +8,6 @@ import com.wangguangwu.utilsmodule.response.Response;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -16,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @author wangguangwu
  */
 @RestController
-@RequestMapping("/user")
 @Slf4j
 public class UserControllerImpl implements UserController {
 
