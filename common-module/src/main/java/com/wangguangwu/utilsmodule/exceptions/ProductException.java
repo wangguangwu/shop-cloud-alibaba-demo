@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
+ * 产品服务异常。
+ *
  * @author wangguangwu
  */
 @SuppressWarnings("unused")
