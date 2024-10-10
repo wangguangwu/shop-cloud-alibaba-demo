@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
+
+import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -24,6 +26,7 @@ import lombok.Setter;
 @TableName("t_product_info")
 public class ProductInfoDO implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     /**

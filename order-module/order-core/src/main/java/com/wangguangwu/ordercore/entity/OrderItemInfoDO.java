@@ -5,12 +5,9 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.io.Serial;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,14 +17,13 @@ import lombok.Setter;
  * </p>
  *
  * @author wangguangwu
- * @since 2024-10-09
+ * @since 2024-10-10
  */
 @Getter
 @Setter
 @TableName("t_order_item_info")
 public class OrderItemInfoDO implements Serializable {
 
-    @Serial
     private static final long serialVersionUID = 1L;
 
     /**
