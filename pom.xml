@@ -31,7 +31,6 @@
         <freemarker.version>2.3.31</freemarker.version>
         <fastJson2.version>2.0.52</fastJson2.version>
         <aspect.version>1.9.6</aspect.version>
-        <nacos.version>2023.0.1.2</nacos.version>
     </properties>
 
     <dependencyManagement>
