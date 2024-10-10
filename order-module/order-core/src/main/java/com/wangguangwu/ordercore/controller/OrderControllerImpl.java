@@ -1,7 +1,6 @@
 package com.wangguangwu.ordercore.controller;
 
 import com.alibaba.fastjson2.JSONObject;
-
 import com.wangguangwu.beanmodule.OrderDetails;
 import com.wangguangwu.beanmodule.OrderParams;
 import com.wangguangwu.orderapi.api.OrderController;
@@ -10,14 +9,15 @@ import com.wangguangwu.utilsmodule.response.Response;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 
 /**
  * @author wangguangwu
  */
 @RestController
-@RequestMapping("/order")
 @Slf4j
 public class OrderControllerImpl implements OrderController {
 
