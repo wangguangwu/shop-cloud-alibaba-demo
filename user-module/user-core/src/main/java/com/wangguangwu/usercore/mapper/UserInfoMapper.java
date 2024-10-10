@@ -1,7 +1,7 @@
 package com.wangguangwu.usercore.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wangguangwu.usercore.entity.UserInfoDO;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -9,7 +9,7 @@ import com.wangguangwu.usercore.entity.UserInfoDO;
  * </p>
  *
  * @author wangguangwu
- * @since 2024-08-21
+ * @since 2024-10-10
  */
 public interface UserInfoMapper extends BaseMapper<UserInfoDO> {
 
