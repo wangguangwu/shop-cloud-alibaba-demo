@@ -19,11 +19,11 @@ public class OrderDetails {
     /**
      * 订单信息
      */
-    private OrderInfo orderInfo;
+    private OrderInfoDTO orderInfoDTO;
 
     /**
      * 订单项信息
      */
-    private List<OrderItemInfo> orderItemInfoList;
+    private List<OrderItemInfoDTO> orderItemInfoDTOList;
 
 }

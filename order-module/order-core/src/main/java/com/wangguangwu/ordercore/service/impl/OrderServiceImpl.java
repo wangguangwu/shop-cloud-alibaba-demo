@@ -61,35 +61,35 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public OrderDetails getOrderDetails(Long oid) {
         // 查询订单信息
-        OrderInfo orderInfo = getOrderInfo(oid);
+        OrderInfoDTO orderInfoDTO = getOrderInfo(oid);
         // 查询订单项信息
-        List<OrderItemInfo> orderItemInfoList = getOrderItemInfoList(oid);
+        List<OrderItemInfoDTO> orderItemInfoDTOList = getOrderItemInfoList(oid);
 
         return OrderDetails.builder()
-                .orderInfo(orderInfo).orderItemInfoList(orderItemInfoList)
+                .orderInfoDTO(orderInfoDTO).orderItemInfoDTOList(orderItemInfoDTOList)
                 .build();
     }
 
-    private OrderInfo getOrderInfo(Long oid) {
+    private OrderInfoDTO getOrderInfo(Long oid) {
         OrderInfoDO orderInfoDO = orderInfoMapper.selectById(oid);
         if (orderInfoDO == null) {
             throw new OrderException("订单不存在");
         }
-        OrderInfo orderInfo = new OrderInfo();
-        BeanUtils.copyProperties(orderInfoDO, orderInfo);
-        return orderInfo;
+        OrderInfoDTO orderInfoDTO = new OrderInfoDTO();
+        BeanUtils.copyProperties(orderInfoDO, orderInfoDTO);
+        return orderInfoDTO;
     }
 
-    private List<OrderItemInfo> getOrderItemInfoList(Long oid) {
+    private List<OrderItemInfoDTO> getOrderItemInfoList(Long oid) {
         LambdaQueryWrapper<OrderItemInfoDO> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(OrderItemInfoDO::getOrderId, oid);
         List<OrderItemInfoDO> orderItemInfoDOList = orderItemInfoMapper.selectList(lambdaQueryWrapper);
 
         return orderItemInfoDOList.stream()
                 .map(orderItemInfoDO -> {
-                    OrderItemInfo orderItemInfo = new OrderItemInfo();
-                    BeanUtils.copyProperties(orderItemInfoDO, orderItemInfo);
-                    return orderItemInfo;
+                    OrderItemInfoDTO orderItemInfoDTO = new OrderItemInfoDTO();
+                    BeanUtils.copyProperties(orderItemInfoDO, orderItemInfoDTO);
+                    return orderItemInfoDTO;
                 }).collect(Collectors.toList());
     }
 

@@ -1,10 +1,10 @@
 package com.wangguangwu.beanmodule;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serial;
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -18,10 +18,7 @@ import java.time.LocalDateTime;
  */
 @Getter
 @Setter
-public class OrderInfo implements Serializable {
-
-    @Serial
-    private static final long serialVersionUID = 1L;
+public class OrderInfoDTO {
 
     /**
      * 主键
@@ -61,10 +58,12 @@ public class OrderInfo implements Serializable {
     /**
      * 创建时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime gmtCreate;
 
     /**
      * 更新时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime gmtUpdated;
 }
