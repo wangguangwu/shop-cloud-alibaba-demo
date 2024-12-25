@@ -48,6 +48,17 @@
             <classifier>osx-aarch_64</classifier>
             <scope>runtime</scope>
         </dependency>
+
+        <!-- Spring Boot Zipkin -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-tracing-bridge-brave</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.zipkin.reporter2</groupId>
+            <artifactId>zipkin-reporter-brave</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
